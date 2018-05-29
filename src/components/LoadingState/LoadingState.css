@@ -1,0 +1,98 @@
+@keyframes three-dots-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.0);
+  }
+}
+
+/* Might need to tweak this. As it is, it will always flex and be centered */
+:local(.component) {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+:local(.threeDotsBouncing) {
+  animation: three-dots-bounce 1s ease-in-out 0s infinite both;
+  background-color: #49998f;
+  border-radius: 100%;
+  display: inline-block;
+  height: 12px;
+  margin: 2px;
+  width: 12px;
+}
+
+:local(.threeDotsBouncing:nth-of-type(2)) {
+  animation-delay: 0.15s;
+}
+
+:local(.threeDotsBouncing:nth-of-type(3)) {
+  animation-delay: 0.3s;
+}
+
+/*
+Passed context strings for specific page/component level styling
+*/
+:local(.loginForm .threeDotsBouncing),
+:local(.resetPasswordForm .threeDotsBouncing),
+:local(.forgotPasswordForm .threeDotsBouncing),
+:local(.verifyCodeForm .threeDotsBouncing),
+:local(.verifyDobForm .threeDotsBouncing),
+:local(.healthRecordActionsViewRecord .threeDotsBouncing),
+:local(.msgForm .threeDotsBouncing),
+:local(.transmitRecord .threeDotsBouncing),
+:local(.auditlog .threeDotsBouncing),
+:local(.requestHealthRecordBtn .threeDotsBouncing),
+:local(.fullPageTakeOver .threeDotsBouncing),
+:local(.waitlist .threeDotsBouncing) {
+  background-color: #fff;
+}
+
+:local(.fullPageTakeOver) {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  padding-top: 350px;
+  background-color: rgba(0, 0, 0, 0.54);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  will-change: opacity;
+  transform: translateZ(0px);
+  transition: left 0ms cubic-bezier(0.23, 1, 0.32, 1) 0ms, opacity 400ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  z-index: 1400;
+}
+
+:local(.fullPageTakeOver .threeDotsBouncing) {
+  height: 52px;
+  margin: 12px;
+  width: 52px;
+}
+
+:local(.healthFilter .threeDotsBouncing) {
+  background-color: #9e9e9e;
+}
+
+:local(.notifications),
+:local(.healthRecordListContainer),
+:local(.homePagePracticeLocation) {
+  margin-top: 20px;
+}
+
+:local(.healthRecordListContainer .threeDotsBouncing) {
+  flex-direction: row;
+}
+
+:local(.upcomingAppointments) {
+  margin-bottom: 20px;
+}
+
+:local(.schedulingFilter) {
+  display:flex;
+  align-items: center;
+  height: 38px;
+  margin: 0;
+}

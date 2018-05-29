@@ -1,0 +1,17 @@
+:local(.header) {
+	display: block;
+	background: #eee;
+	border-bottom: 1px solid #ddd;
+	color: #fff;
+	padding: 16px 30px;
+	grid-area: Header;
+}
+
+:local(ul) {
+	list-style: none;
+}
+
+:local(li) {
+	display: inline-block;
+	margin-right: 30px;
+}

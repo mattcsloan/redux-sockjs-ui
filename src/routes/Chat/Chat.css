@@ -1,0 +1,22 @@
+:local(.pageItem) {
+	display: grid;
+	grid-template-areas: "MainSidebar MainContent MainContent";
+	width: 100vw;
+	height: 100vh;
+	grid-template-rows: 1fr;
+	grid-template-columns: 300px 1fr;
+}
+
+/* TODO: Move to base styles repo */
+:local(input) {
+	border: 1px solid #ddd;
+	padding: 10px 12px;
+	box-shadow: none;
+	border-radius: 4px;
+}
+
+/* TODO: Move to base styles repo */
+:local(hr) {
+	border: none;
+	border-bottom: 1px solid #ddd;
+}

@@ -1,0 +1,5 @@
+:local(.mainContent) {
+    display: block;
+	grid-area: MainContent;
+	padding: 30px;
+}

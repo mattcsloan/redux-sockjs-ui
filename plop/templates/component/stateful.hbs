@@ -1,0 +1,26 @@
+import React, { Component } from 'react';
+{{#if styles}}
+	import classnames from 'classnames';
+	import s from './{{name}}.css';
+{{/if}}
+
+class {{name}} extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
+
+	render() {
+		return (
+			{{#if styles}}
+				<div className={s.{{camelCase name ~}} }>
+			{{else}}
+				<div>
+			{{/if}}
+					{{name}}
+				</div>
+		);
+	}
+}
+
+export default {{name}};
